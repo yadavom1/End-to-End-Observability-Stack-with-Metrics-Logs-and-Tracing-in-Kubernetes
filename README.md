@@ -64,6 +64,7 @@ This project implements a complete observability stack in Kubernetes covering:
 
 🔹 Install Prometheus
 
+``` 
 //  apiVersion: v1
 kind: Namespace
 metadata:
@@ -90,7 +91,11 @@ spec:
         ports:
         - containerPort: 9090
 
+```
+
 🔹 Install Grafana
+
+```
 
 //  apiVersion: apps/v1
 kind: Deployment
@@ -113,9 +118,13 @@ spec:
         ports:
         - containerPort: 3000
 
+```
+
 2️⃣ Logging Setup
 
 🔹 Elasticsearch
+
+```
 
 //  apiVersion: apps/v1
 kind: Deployment
@@ -135,7 +144,11 @@ spec:
       - name: elasticsearch
         image: docker.elastic.co/elasticsearch/elasticsearch:7.10.1
 
+```
+
 🔹 Fluentd
+
+```
 
 //  apiVersion: apps/v1
 kind: DaemonSet
@@ -154,7 +167,11 @@ spec:
       - name: fluentd
         image: fluent/fluentd
 
+```
+
 🔹 Kibana
+
+```
 
 //  apiVersion: apps/v1
 kind: Deployment
@@ -174,8 +191,11 @@ spec:
       - name: kibana
         image: docker.elastic.co/kibana/kibana:7.10.1
 
+```
 
 3️⃣ Distributed Tracing 
+
+```
 
 //  apiVersion: apps/v1
 kind: Deployment
@@ -196,6 +216,8 @@ spec:
         image: jaegertracing/all-in-one:latest
         ports:
         - containerPort: 16686
+
+```
 
  4️⃣ Apply All Manifests
 

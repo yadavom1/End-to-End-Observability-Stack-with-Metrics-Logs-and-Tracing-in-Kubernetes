@@ -61,13 +61,14 @@ This project implements a complete observability stack in Kubernetes covering:
 # ⚙️ Implementation Steps
 
 1️⃣ Metrics Setup
+
 🔹 Install Prometheus
 
 apiVersion: v1
 kind: Namespace
 metadata:
   name: monitoring
----
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -113,6 +114,7 @@ spec:
         - containerPort: 3000
 
 2️⃣ Logging Setup
+
 🔹 Elasticsearch
 
 apiVersion: apps/v1

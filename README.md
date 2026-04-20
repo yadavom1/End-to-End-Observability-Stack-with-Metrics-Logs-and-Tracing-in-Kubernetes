@@ -65,7 +65,7 @@ This project implements a complete observability stack in Kubernetes covering:
 🔹 Install Prometheus
 
 ``` 
-//  apiVersion: v1
+  apiVersion: v1
 kind: Namespace
 metadata:
   name: monitoring
@@ -97,7 +97,7 @@ spec:
 
 ```
 
-//  apiVersion: apps/v1
+  apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: grafana
@@ -126,7 +126,7 @@ spec:
 
 ```
 
-//  apiVersion: apps/v1
+  apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: elasticsearch
@@ -150,7 +150,7 @@ spec:
 
 ```
 
-//  apiVersion: apps/v1
+  apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: fluentd
@@ -173,7 +173,7 @@ spec:
 
 ```
 
-//  apiVersion: apps/v1
+  apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kibana
@@ -197,7 +197,7 @@ spec:
 
 ```
 
-//  apiVersion: apps/v1
+  apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: jaeger
@@ -221,7 +221,7 @@ spec:
 
  4️⃣ Apply All Manifests
 
-//  kubectl apply -f manifests/
+  kubectl apply -f manifests/
 
  # 📊 Visualization
  
